@@ -1,0 +1,72 @@
+@use "../../main-style/style.scss";
+.signin-container{
+    width: 100vw; background-color: rgba(0, 0, 0, 0.39);
+    position: fixed; left: 0; top: 14vh; z-index: 1000000000000000000000000000;
+    height: 86vh;
+    .signin-container-section {
+        width: 40vw;  background-color: #fffefbb7;margin-top: 20px;
+        padding: 50px  20px;
+        color: style.$font-g1; margin-left: auto ; margin-right: auto;
+        border-radius: 15px;
+        .signup-header {
+            padding: 20px; display: flex; align-items: center; justify-content: center;
+            font-size: 1.5em;
+        }
+        
+    }
+
+    .submit-botton {
+        margin-left: auto; margin-right: auto; padding: 10px 50px; border-radius: 10px; border: none;
+        display: block; cursor: pointer;
+        text-transform: capitalize; font-weight: bold; color: white; background-color: style.$font-b;
+    }
+
+
+    .container-input {
+
+        width: 100%; margin-top: 15px; margin-bottom: 15px; position: relative;
+        input {
+            width: 70%;margin-left: auto; margin-right: auto;
+            height: 40px; display: block; padding: 10px; text-transform: capitalize;
+            padding-left: 50px; border: none; border-radius: 5px;
+            background-color: rgba(255, 255, 255, 0.705);
+            font-weight: bold; color: style.$font-g1;
+
+        }
+        .error-section{
+            width: 70%;  margin-left: auto; margin-right: auto;
+        }
+        span {
+            position: absolute; left: 90px; top: 8px; font-size: 1.5em;
+        }
+
+    }
+
+
+
+    .container-header-sign{
+        position: relative;
+        span {
+            position: absolute; right: 20px; top: 20px; font-size: 1.8em; cursor: pointer;
+        } 
+        margin-bottom: 50px;
+    }
+
+
+
+    .special-text{
+        padding: 25px; margin-left: auto; margin-right: auto; display: flex; justify-content: center;
+        span {
+            color: style.$font-g2; cursor: pointer; font-weight: bold; text-transform: capitalize;
+        }
+    }
+}
+
+
+@media screen and (max-width:1100px) {
+    .signin-container{
+        .signin-container-section{
+            width: 80vw;
+        }
+    }
+}

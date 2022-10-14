@@ -1,0 +1,42 @@
+@use "../../../main-style/style.scss";
+.swiper-container{
+    width: 100%; height: 100vh;
+}
+.swiper-slide {
+    height: 100%;
+    height: 80vh;
+    img {
+        width: 100vw; height: 80vh;
+    }
+}
+.swiper-button-next, .swiper-button-prev {
+    color: red;
+}
+
+@media screen and (max-width:900px) {
+    .swiper-slide{
+        margin-top: 65px;
+        height: 70vh; 
+    }
+}
+
+
+
+//------------------------------------item in slider ---------------------------------------------------//
+.swiper-container-all .slider-item-1{
+    position: relative;
+}
+.swiper-container-all .slider-item-2 {
+    position: relative;
+
+}
+.swiper-container-all .slider-item-3 {
+position: relative;
+}
+.select-button-slider {
+    position: absolute; left: 50%; bottom: 50px; transform: translateX(-50%); 
+    padding: 12px 30px; background-color: style.$font-g1; border: 1px solid rgba(192, 192, 192, 0);
+    color: white; font-size: 1em; border-radius: 5px; cursor: pointer;
+}
+@media screen and (max-width:900px) {
+}

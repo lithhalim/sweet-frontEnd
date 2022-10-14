@@ -1,0 +1,77 @@
+@use "../../main-style/style.scss";
+
+.header-container1 {
+    display: flex; align-items: center; justify-content: space-around;
+    border-bottom: 2px  solid silver;
+    position: sticky; left: 0; top: 0;
+    background-color: white; z-index: 100000000000000000000000000;
+}
+
+
+
+.shipping-container {
+    .contain{
+        display: flex;  font-weight: bold; text-transform: capitalize; color: style.$font-g1;
+        gap: 10px; align-items: center; padding: 15px;    
+        img {
+            width: 25px; height: 25px;
+        }
+    }
+    .Navbar-show{
+        display: none;
+    }
+}
+
+
+.logo-section {
+    color: style.$font-g1; font-weight: bold; text-transform: capitalize;
+    img {
+        width: 170px; height: 50px; margin-left: auto;  margin-right: auto;
+        display: block;
+    }
+    .nav-container {
+        display: flex; 
+        li{
+            padding: 10px; cursor: pointer; transition: all .5s;
+            &:hover{
+                transform: scale(1.1); transition: all .5s;
+            }
+        }
+    }
+}
+
+
+
+.header-icon-section {
+    display: flex; align-items: center; font-size: 1.6em; gap: 5px;
+    color: style.$font-g1;
+    li{
+        cursor: pointer; position: relative;
+        .notification{
+            position: absolute;right: 0; top: -8px;color: white; border: 1px solid style.$font-g1;
+            padding: 3px; font-size: .4em; background-color: style.$font-b; display: flex; align-items: center; justify-content: center;
+            border-radius: 50%;
+        }
+    
+    }
+}
+
+
+
+@media screen and (max-width:900px) {
+    .shipping-container {
+        .contain {
+            display: none;
+        }
+        .Navbar-show{
+            display: block; font-size: 1.6em; cursor: pointer;
+            display: flex;
+        }
+    
+    }
+    .logo-section {
+        .nav-container{
+            display: none;
+        }
+    }
+}

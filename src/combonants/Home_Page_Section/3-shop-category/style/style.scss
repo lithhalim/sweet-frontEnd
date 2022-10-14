@@ -1,0 +1,22 @@
+@use "../../../main-style/style.scss";
+.header-information{
+    color: style.$font-g1;
+    margin-top: 50px; text-transform: uppercase; display: flex; align-items: center; justify-content: center;
+    padding: 20px; width: 100vw; border-bottom: 2px solid style.$font-g1;
+}
+
+
+.container-all-card {
+    display: grid; grid-template-columns: repeat(auto-fill,minmax(350px,1fr));
+    gap: 20px;  padding: 30px ; color: style.$font-g1; border-radius: 10px;
+    .container-card{
+        background-color: rgba(192, 192, 192, 0.178); text-align: center; 
+        cursor: pointer;
+        img {
+            width: 100%; border-radius: 5px; height: 250px;
+        }
+        p{
+            padding: 5px;
+        }
+    }
+}
