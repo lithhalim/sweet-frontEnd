@@ -24,7 +24,7 @@ export const allLikesIhave = createSlice({
     },
     RemoveAllLikes: (state, action) => {
         state.value=state.value-=1;
-        state.alllikes=state.alllikes.filter((a,i)=>(a.id!=action.payload))
+        state.alllikes=state.alllikes.filter((a,i)=>(a.id!=action.payload.id))
         window.localStorage.LikesProduct=JSON.stringify(state)
 
     },

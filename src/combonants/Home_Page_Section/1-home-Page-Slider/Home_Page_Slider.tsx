@@ -2,11 +2,10 @@ import React from 'react';
 import  { Navigation, Pagination, Scrollbar, A11y } from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react';
 
+import image1 from "../../../assest/home-slider/cake.jpg";
+import image2 from "../../../assest/home-slider/arabicsweet.jpg";
+import image3 from "../../../assest/home-slider/chooclate.jpg";
 
-import image1 from "../../../assest/home-slider/sweet1.webp";
-import image2 from "../../../assest/home-slider/sweet2.jpg";
-import image3 from "../../../assest/home-slider/sweet 3.jpg";
-import image4 from "../../../assest/home-slider/sweet 4.webp";
 
 
 import "./style/style.scss";

@@ -58,7 +58,7 @@ function Popular_Product() {
         }else{
             //get the all information aboat user have reguster
             const {image:imageperson,regusterid,fullName} =Login_Create_Contextitem.AllUserDaata
-            let DataLike={person_do_like_id:regusterid, person_do_like_name:fullName, person_do_like_image:imageperson,post_liked_id:id,productName:Product,productImage:image,price:price}  
+            let DataLike={person_do_like_id:regusterid, person_do_like_name:fullName, person_do_like_image:imageperson,id:id,productName:Product,productImage:image,price:price}  
 
             let datacheck=selectData.allLikesIhave.alllikes.findIndex((data)=>(data.post_liked_id==id))
             datacheck==-1?dispatch(addLikes(DataLike)):<></>
@@ -90,6 +90,7 @@ function Popular_Product() {
                         navigation //right and left button
                         pagination={{ clickable: true }}//you can click right and left
                         scrollbar={{ draggable: true }}//you can dragg element
+                        
                         >
                             {datause!==false?
                                 datause.map(({id,image,Product,price,quantity},i)=>(

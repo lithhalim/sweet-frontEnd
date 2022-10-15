@@ -2,17 +2,20 @@ import React from 'react';
 import "./style/style.scss";
 
 import cake from "../../../assest/catagory/cake.jpg";
-import arabic_Sweet from "../../../assest/catagory/arabic-sweet.jpg";
-import chooclate from "../../../assest/catagory/chooclate.jpeg";
-import Western_sweets from "../../../assest/catagory/westrean-sweet.webp";
-import special_products from "../../../assest/catagory/houny.webp"
+import arabic_Sweet from "../../../assest/catagory/arabic sweet.jpg";
+import chooclate from "../../../assest/catagory/chocolate.jpg";
+import honey from "../../../assest/catagory/honey.jpg";
+import iceCreem from "../../../assest/catagory/iceCreem.jpg";
+import spicalOne from "../../../assest/catagory/zattar.jpg"
 
-let datause=[{image:chooclate,name:"Chocolates and Cackes"},
+
+let datause=[
+{image:chooclate,name:"Chocolates Sweet"},
 {image:arabic_Sweet,name:"Arabic sweets"},
-{image:Western_sweets,name:"Western sweets"},
-{image:cake,name:"Cake and ice cream"},
-{image:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQam6JRRWZRpz_mTyefcT7WgGLMbl2xo-9pH868UrmW&s",name:"traditional products"},
-{image:special_products,name:"special products"},
+{image:honey,name:"honey sweets"},
+{image:cake,name:"Cake Sweet"},
+{image:iceCreem,name:"ice Cream Sweet"},
+{image:spicalOne,name:"special products"},
 ]
 
 function Shop_Category() {

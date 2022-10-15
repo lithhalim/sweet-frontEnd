@@ -4,9 +4,9 @@
 }
 .swiper-slide {
     height: 100%;
-    height: 80vh;
+    height: 85vh;
     img {
-       width: 97vw; height: 70vh;
+       width: 100vw; height: 85vh;
     }
 }
 .swiper-button-next, .swiper-button-prev {
@@ -16,7 +16,7 @@
 @media screen and (max-width:900px) {
     .swiper-slide{
         margin-top: 65px;
-        height: 70vh; 
+        height: 85vh; 
     }
 }
 
