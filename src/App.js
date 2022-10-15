@@ -21,19 +21,19 @@ const queryClient = new QueryClient();
 
 const App=()=>{
     return(
-        <Sign_Provider>
-                <Login_Provider>
-                        <QueryClientProvider client={queryClient}>
-                                <Provider store={store}>
-                                        <BrowserRouter >
-                                                        <Routes>
-                                                                <Route path="/" element={<><Header_main/> <Home_Page_Slider/><Shop_Category/> <Signup_Section/> <Signin_Section_Have/></>}/>
-                                                        </Routes>
-                                        </BrowserRouter>
-                                </Provider>
-                        </QueryClientProvider>
-                </Login_Provider>
-        </Sign_Provider>
+                <Sign_Provider>
+                        <Login_Provider>
+                                <QueryClientProvider client={queryClient}>
+                                        <Provider store={store}>
+                                                <BrowserRouter >
+                                                                <Routes>
+                                                                        <Route path="/" element={<><Header_main/> <Home_Page_Slider/><Shop_Category/> <Signup_Section/> <Signin_Section_Have/></>}/>
+                                                                </Routes>
+                                                </BrowserRouter>
+                                        </Provider>
+                                </QueryClientProvider>
+                        </Login_Provider>
+                </Sign_Provider>
     )
 }
 

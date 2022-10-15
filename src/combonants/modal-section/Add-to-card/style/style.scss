@@ -1,0 +1,15 @@
+@use "../../../main-style/style.scss";
+
+.container-modal-section{
+    height: 60vh; width: 60vw; position: absolute; left: 50%; top: 50%;
+    transform: translate(-50%,-50%); background-color: white;
+
+    .modal-image{
+        width: 100px; height: 80px;
+    }
+
+    .quintity-button{
+        display: flex;  font-weight: bold; align-items: center; justify-content: space-around;
+        color: style.$font-g1; width: 70%;font-size: 1.5em;
+    }
+}
