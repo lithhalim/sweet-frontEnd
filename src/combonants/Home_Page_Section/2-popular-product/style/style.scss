@@ -1,0 +1,59 @@
+@use "../../../main-style/style.scss";
+
+.popular-slider .swiper-container{
+    width: 300px; height: 100vh;
+}
+
+.popular-slider .swiper-slide {
+    height: 300px;
+    img {
+       width: 100%; height: 300px;
+    }
+}
+.popular-slider .swiper-button-next,.popular-slider .swiper-button-prev {
+    background-color: white; color: style.$font-g1; font-size: .7em; border-radius: 5px;
+}
+
+@media screen and (max-width:900px) {
+   .popular-slider .swiper-slide{
+        margin-top: 65px;
+        height: 70vh; 
+    }
+}
+
+
+
+
+
+//------------------------------------item in slider ---------------------------------------------------//
+.swiper-container-all-popular {
+margin: 50px 150px;
+}
+.swiper-container-all-popular .slider-item{
+    position: relative; background-color: rgba(192, 192, 192, 0.247);
+    border-radius: 15px; overflow: hidden;
+    .text-area{
+        padding: 5px 15px; color: white; display:flex; justify-content: space-between;
+        width: 100%; height: 80px; background-color:style.$font-g1;
+        position: absolute; left: 0; bottom: 0; font-weight: bold; cursor: pointer;
+        .text {
+            padding: 5px;
+            .price{
+                margin-top: 10px;
+            }
+        }
+        .icon{
+            display: flex; width: 80px; justify-content: space-between; align-items: center;
+            span {
+                font-size: 1.5em; color: white; display: block;
+            }
+
+        }
+    }
+}
+
+@media screen and (max-width:1000px) {
+    .swiper-container-all-popular{
+        margin: 50px 30px;
+    }
+}

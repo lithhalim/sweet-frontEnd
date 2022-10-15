@@ -6,7 +6,7 @@ export const Login_Create_Context=React.createContext();
 
 export function Login_Provider(props) {
 
-    const [AllUserDaata,setAllUserData]=useState(window.localStorage.saveAllMyData?JSON.parse(window.localStorage.saveAllMyData):false)
+    const [AllUserDaata,setAllUserData]=useState(window.localStorage.SaveAuthnticaiton?JSON.parse(window.localStorage.SaveAuthnticaiton):false)
 
 
   return (

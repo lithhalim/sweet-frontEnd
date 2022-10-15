@@ -68,5 +68,31 @@
         .signin-container-section{
             width: 80vw;
         }
+        .container-input  {
+        span {
+            left: 130px;
+        }
+        }
+    
+    }
+}
+@media screen and (max-width:800px) {
+    .signin-container{
+        .container-input  {
+        span {
+            left: 90px;
+        }
+        }
+    
+    }
+}
+@media screen and (max-width:600px) {
+    .signin-container{
+        .container-input  {
+        span {
+            left: 70px;
+        }
+        }
+    
     }
 }

@@ -6,11 +6,11 @@
     height: 100%;
     height: 80vh;
     img {
-        width: 100vw; height: 80vh;
+       width: 97vw; height: 70vh;
     }
 }
 .swiper-button-next, .swiper-button-prev {
-    color: red;
+    color: style.$font-g1;
 }
 
 @media screen and (max-width:900px) {

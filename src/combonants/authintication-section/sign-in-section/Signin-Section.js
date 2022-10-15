@@ -21,6 +21,7 @@ function Signin_Section_Have() {
 
   const [statusEmail,setStatusEmail]=useState(false);
   const loginContext=useContext(Login_Create_Context);
+  const Sign_ContextItem=useContext(Sign_Context)
 
   const Get_AllDataHave=(data)=>{
     const {email,password} =data;
@@ -32,9 +33,9 @@ function Signin_Section_Have() {
             headers:{ 'Content-Type': 'application/json' ,'Accept': 'application/json',"authorization":`BASIC ${decoded}` }
           }).then((x)=>{
                 //send the accsess Token To User To Useit
-                setStatusEmail("Email Is Ok Welcome")
+                Sign_ContextItem.setsignin(false);
                 const decoded = jwt_decode(x.data.accessToken);
-                window.localStorage.saveAllMyData=JSON.stringify(decoded);
+                window.localStorage.SaveAuthnticaiton=JSON.stringify(decoded);
                 loginContext.setAllUserData(decoded)
             }).catch((errors)=>{
               console.log(errors)

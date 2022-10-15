@@ -15,6 +15,7 @@ import Shop_Category from "./combonants/Home_Page_Section/3-shop-category/Shop_C
 import Signup_Section from "./combonants/authintication-section/sign-up-section/Signup_Section";
 import { Sign_Provider } from "./context-api/Sign-context";
 import Signin_Section_Have from "./combonants/authintication-section/sign-in-section/Signin-Section";
+import Popular_Product from "./combonants/Home_Page_Section/2-popular-product/Popular_Product";
 
 
 const queryClient = new QueryClient();
@@ -27,7 +28,7 @@ const App=()=>{
                                         <Provider store={store}>
                                                 <BrowserRouter >
                                                                 <Routes>
-                                                                        <Route path="/" element={<><Header_main/> <Home_Page_Slider/><Shop_Category/> <Signup_Section/> <Signin_Section_Have/></>}/>
+                                                                        <Route path="/" element={<><Header_main/> <Home_Page_Slider/><Shop_Category/> <Popular_Product/> <Signup_Section/> <Signin_Section_Have/></>}/>
                                                                 </Routes>
                                                 </BrowserRouter>
                                         </Provider>
