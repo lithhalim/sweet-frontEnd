@@ -20,6 +20,8 @@ import { Login_Create_Context } from '../../../context-api/authntication-context
 import { Sign_Context } from '../../../context-api/Sign-context';
 import axios from 'axios';
 import { addLikes } from '../../../redux/AddLikes';
+import { useNavigate } from 'react-router';
+import { Catagory_Create_Context } from '../../../context-api/catagory-context';
 
 
 
@@ -27,7 +29,9 @@ import { addLikes } from '../../../redux/AddLikes';
 function Popular_Product() {
     const Login_Create_Contextitem=useContext(Login_Create_Context)
     const Sign_ContextItem=useContext(Sign_Context)
-    const dispatch=useDispatch()
+    const SelectPagecontext=useContext(Catagory_Create_Context)
+    const dispatch=useDispatch();
+    const Navi=useNavigate()
     const selectData=useSelector((state)=>(state))
     const [isfitshing,setisfitshing]=useState(true)
     const [datause,setdatause]=useState(false);
@@ -75,6 +79,15 @@ function Popular_Product() {
     },[])
 
 
+    //------------------------------------go to page --------------------------------------------------//
+    const gotopage=(event)=>{
+        let dataSelect=event.currentTarget.getAttribute("datatype");
+        SelectPagecontext.setSelectPage(dataSelect);
+        window.localStorage.savePage=dataSelect
+        Navi("/select")
+    }
+
+
 
   return (
     <div className='popular-slider'>
@@ -95,7 +108,7 @@ function Popular_Product() {
                             {datause!==false?
                                 datause.map(({id,image,Product,price,quantity},i)=>(
                                     <SwiperSlide key={i}>
-                                        <div className='slider-item'  >
+                                        <div className='slider-item' onClick={gotopage} datatype={id}  style={{cursor:"pointer"}}>
                                             <img src={image} alt="" />
                                             <div className='text-area'>
                                                 <div className='text'>
