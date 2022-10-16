@@ -1,0 +1,22 @@
+@use "../../main-style/style.scss";
+.container-all-item-page {
+    display: grid; grid-template-columns: repeat(auto-fill,minmax(250px,1fr));
+    gap: 20px; padding: 50px;
+    .slider-item{
+        img {
+            width: 100%; height: 300px;
+        }
+        .text-area {
+            display: flex; justify-content: space-between;
+            .icon {
+                font-size: 1.4em;
+                display: flex; width: 60px; justify-content: space-between; align-items: center;
+                span {
+                    cursor: pointer;
+                }
+            }
+        }
+
+        
+    }
+}
