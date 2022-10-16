@@ -2,6 +2,7 @@ import axios from 'axios';
 import React, { useContext, useEffect, useState } from 'react';
 import { Catagory_Create_Context } from '../../context-api/catagory-context';
 import Card_section from '../Home_Page_Section/Card_section';
+import Loading_Section from '../loading-section/Loding_Section';
 import "./style/style.scss"
 
 function Catagory_Section() {
@@ -18,7 +19,11 @@ function Catagory_Section() {
                 setisfitshing(false)
             }):<></>
         },[])
-    
+
+        if(isfitshing){
+            return<Loading_Section/>
+        }
+        
   return (
     <div className='container-all-item-page'>
         {datause!==false?datause.map((data,i)=>(<Card_section dataHave={data} key={i}/>)) :<></>}

@@ -7,6 +7,12 @@ import { useNavigate } from 'react-router';
 function First_section() {
 
 
+  const showBar=()=>{
+    document.querySelector(".nav-container")?.classList.toggle("active")
+    console.log(document.querySelector(".nav-container"))
+  }
+
+
   return (
     <div className='shipping-container'>
       <div className='contain'>
@@ -15,7 +21,7 @@ function First_section() {
         <p>jordan</p>
       </div>
 
-      <p className='Navbar-show'>
+      <p className='Navbar-show' onClick={showBar}>
         <FaBars/>
       </p>
     </div>

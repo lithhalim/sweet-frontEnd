@@ -13,6 +13,7 @@ import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
 import axios from 'axios';
 import Card_section from '../Card_section';
+import Loading_Section from '../../loading-section/Loding_Section';
 
 
 
@@ -26,7 +27,6 @@ function Popular_Product() {
 
 
 
-
     //----------------------------------------get all post -------------------------------------------//
     useEffect(()=>{
         axios.get(`${process.env.REACT_APP_API}getpostes`).then((data)=>{
@@ -34,6 +34,10 @@ function Popular_Product() {
             setisfitshing(false)
         })
     },[])
+
+    if(isfitshing){
+        return<Loading_Section/>
+    }
 
 
 

@@ -1,6 +1,7 @@
 import axios from 'axios';
 import React, { useContext, useEffect, useState } from 'react';
 import { Catagory_Create_Context } from '../../context-api/catagory-context';
+import Loading_Section from '../loading-section/Loding_Section';
 import Comment_Section from './Select-page/Comment_Section';
 import Information_page from './Select-page/Information_page';
 import "./style/style.scss";
@@ -8,15 +9,22 @@ import "./style/style.scss";
 function Select_Page() {
     const selectPageContext=useContext(Catagory_Create_Context);
     const [datause,setdatause]=useState(false)
+    const [isfitshing,setisfitshing]=useState(true)
+
 
 
     useEffect(()=>{
         if(selectPageContext.selectPage!==false){
             axios.get(`${process.env.REACT_APP_API}getproductpage/${selectPageContext.selectPage}`).then((data)=>{
+                setisfitshing(false)
                 setdatause(data.data)
             })
         }
     },[])
+
+    if(isfitshing){
+        return<Loading_Section/>
+    }
   return (
     <div className='select-page-container'>
         {datause!==false?
