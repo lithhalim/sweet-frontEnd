@@ -1,10 +1,10 @@
 @use "../../main-style/style.scss";
 .signin-container{
     width: 100vw; background-color: rgba(0, 0, 0, 0.39);
-    position: fixed; left: 0; top: 14vh; z-index: 100000000000000000000000000000000000000000000000000000;
+    position: fixed; left: 0; top: 14vh; z-index: 100000;
     height: 86vh;
     .signin-container-section {
-        width: 40vw;  background-color: #fffefbb7;margin-top: 20px;
+        width: 40vw;  background-color: #fffefbd2;margin-top: 20px;
         padding: 50px  20px;
         color: style.$font-g1; margin-left: auto ; margin-right: auto;
         border-radius: 15px;
