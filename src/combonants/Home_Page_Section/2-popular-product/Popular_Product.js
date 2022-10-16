@@ -52,11 +52,16 @@ function Popular_Product() {
             <div className='swiper-container-all-popular'>
                     <Swiper
                         modules={[Navigation, Pagination, Scrollbar, A11y]} //moduls will be active
-                        spaceBetween={10}//the space between item
-                        slidesPerView={4}//number of item in one page
                         navigation //right and left button
                         pagination={{ clickable: true }}//you can click right and left
                         scrollbar={{ draggable: true }}//you can dragg element
+                        breakpoints={{
+                            0:{slidesPerView:1,spaceBetween:10},
+                            480:{slidesPerView:2,spaceBetween:10},
+                            768:{slidesPerView:3,spaceBetween:10},
+                            1000:{slidesPerView:4,spaceBetween:10},
+                            1250:{slidesPerView:5,spaceBetween:10},
+                        }}
                         
                         >
                             {datause!==false?
