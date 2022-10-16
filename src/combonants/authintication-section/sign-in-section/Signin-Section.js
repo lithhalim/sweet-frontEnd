@@ -55,6 +55,7 @@ function Signin_Section_Have() {
 
 const closeSection=()=>{
     Sign_Context2.setsignin(false)
+    console.log("Ss")
 
 }
 
@@ -65,7 +66,7 @@ const closeSection=()=>{
                     <div className='signin-container-section'>
                     <div className='container-header-sign'>
                     <h1 className='signup-header'>Create An Account</h1>
-                    <span onClick={closeSection}><AiOutlineCloseCircle/></span>
+                    <span  className='icon-close'  onClick={closeSection} >< AiOutlineCloseCircle /></span>
                     </div>
             
                             <Formik

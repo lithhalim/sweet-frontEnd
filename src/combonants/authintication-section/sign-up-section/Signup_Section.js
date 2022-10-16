@@ -76,7 +76,7 @@ const loginsection=()=>{
                 <div className='signin-container-section'>
                 <div className='container-header-sign'>
                   <h1 className='signup-header'>Create An Account</h1>
-                  <span onClick={closesection}><AiOutlineCloseCircle/></span>
+                  <span  className='icon-close' onClick={closesection}><AiOutlineCloseCircle/></span>
                 </div>
 
                 <Formik
@@ -107,11 +107,11 @@ const loginsection=()=>{
                                     <Field  type="password" placeholder="Password"  name='password' />
                                     {errors.password && touched.password ? <div className='error-section'>{errors.password}</div> : null}
                               </div>
+                                <p className='special-text'> Already Have An Account ? <span onClick={loginsection}>Login Here</span> </p>
+                                <p className='special-text'>{statusEmail!==false?<span>{statusEmail}</span>:<></>}</p>
 
                                 <button className='submit-botton' type="submit">Reguster</button>
 
-                                <p className='special-text'> Already Have An Account ? <span onClick={loginsection}>Login Here</span> </p>
-                                <p>{statusEmail!==false?<span>{statusEmail}</span>:<></>}</p>
                             </Form>
                         )}
                   </Formik>
