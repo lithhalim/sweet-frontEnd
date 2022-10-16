@@ -2,6 +2,8 @@ import React from 'react';
 import { useNavigate } from 'react-router';
 import Main_logo from "../../../assest/logo/main-logo.png";
 
+
+
 function Secand_Section() {
   const Navi=useNavigate()
   const homepage=()=>{Navi("/")}
