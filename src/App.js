@@ -33,7 +33,7 @@ const App=()=>{
                                                         <BrowserRouter >
                                                                         <Routes>
                                                                                 <Route path="/" element={<><Header_main/> <Home_Page_Slider/><Shop_Category/> <Popular_Product/> <Signup_Section/> <Signin_Section_Have/><Footer_Section/> </>}/>
-                                                                                <Route path="/select" element={<> <Header_main/><Select_Page/> <Footer_Section/></>}/>
+                                                                                <Route path="/select" element={<> <Header_main/><Select_Page/> <Signup_Section/> <Signin_Section_Have/><Footer_Section/></>}/>
                                                                         </Routes>
                                                         </BrowserRouter>
                                                 </Provider>

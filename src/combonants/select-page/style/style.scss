@@ -1,6 +1,6 @@
 @use "../../main-style/style.scss";
 .select-page-container {
-    margin: 50px;
+    margin: 50px;z-index: 10;
     .information-container {
         display: flex; flex-wrap: wrap;  gap: 50px; justify-content: space-between;
         color: style.$font-g2;
