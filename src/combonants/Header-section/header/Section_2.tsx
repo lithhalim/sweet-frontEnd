@@ -6,11 +6,12 @@ function Secand_Section() {
   const Navi=useNavigate()
   const homepage=()=>{Navi("/")}
 
+
   return (
     <div className='logo-section'>
       <img src={Main_logo} alt="" onClick={homepage}   style={{cursor:"pointer"}}/>
         <ul className='nav-container'>
-          <li>Home</li>
+          <li onClick={homepage}>Home</li>
           <li>Cake</li>
           <li>Arabic Sweet</li>
           <li>Our Stores</li>

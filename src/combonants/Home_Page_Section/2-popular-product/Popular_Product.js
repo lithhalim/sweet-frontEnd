@@ -108,8 +108,8 @@ function Popular_Product() {
                             {datause!==false?
                                 datause.map(({id,image,Product,price,quantity},i)=>(
                                     <SwiperSlide key={i}>
-                                        <div className='slider-item' onClick={gotopage} datatype={id}  style={{cursor:"pointer"}}>
-                                            <img src={image} alt="" />
+                                        <div className='slider-item'    >
+                                            <img src={image} alt="" datatype={id}  onClick={gotopage} style={{cursor:"pointer"}}/>
                                             <div className='text-area'>
                                                 <div className='text'>
                                                     <p className='product'>{Product}</p>
