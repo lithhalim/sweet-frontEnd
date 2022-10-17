@@ -11,6 +11,7 @@ import {AiOutlineMinusCircle} from "react-icons/ai"
 import "./style/style.scss"
 import { useDispatch, useSelector } from 'react-redux';
 import { modifyquantity, modifyquantitydecrese, removeFromCart } from '../../../redux/addToCart';
+import { useNavigate } from 'react-router';
 
 
 
@@ -21,7 +22,7 @@ export default function Add_To_Card() {
   const [open, setOpen] = useState(false);
   const handleOpen = () => {setOpen(true)};
   const handleClose = () => setOpen(false);
-
+  const Navi=useNavigate()
   const selectData=useSelector((state)=>(state))
   const dispatch=useDispatch();
 
@@ -86,7 +87,9 @@ const columns = [
   const rows = selectData.addToCartSlice.allProduct
   
 
-
+  const gotocheckout=()=>{
+    Navi("/checkout")
+  }
 
 
 
@@ -97,6 +100,7 @@ const columns = [
             <Box className='container-modal-section'  >
                 <div className='header-addtocard'><p> Number Product:{selectData.addToCartSlice.value}</p> <p>tatal price:{totalPrice!==undefined?totalPrice:<></>}</p></div>
                 <DataGrid rows={rows}  columns={columns}/>
+                <button className='checkout-button-one' onClick={gotocheckout}>Check Out</button>
             </Box>
         </Modal>
     </div>

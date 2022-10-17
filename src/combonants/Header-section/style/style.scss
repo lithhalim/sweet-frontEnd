@@ -61,7 +61,7 @@
         position: relative;
         .logout-section {
             position: absolute;left: -80px; top: 60px; background-color: white; padding: 15px;
-            border-radius: 5px;opacity: 0; transition: all .5s;
+            border-radius: 5px;opacity: 0; transition: all .5s; display: none;
             .text {
                 display: flex; align-items: center;
             }
@@ -74,6 +74,7 @@
         }
         .logout-section.active {
             opacity: 1; transition: all .5s; z-index: 111111111111111111111111111111111;
+            display: block;
         }
 
     }
@@ -94,11 +95,11 @@
     }
     .logo-section {
         .nav-container{
-            display: block; position: absolute; left: 0;top: 60px; background-color: white; opacity: 0;
+            display: block; position: absolute; left: 0;top: 51px; background-color: white; opacity: 0;
             width: 100%; text-align: center; transition: all .5s; display: none; transition: all .5s;
         }
         .nav-container.active {
-            opacity: 1; transition: all .5s; display: block;
+            opacity: 1; transition: all .5s; display: block; z-index: 1000000000000000000000000000;
         }
     }
 }

@@ -21,9 +21,13 @@ import { Catagory_Provider } from "./context-api/catagory-context";
 import Footer_Section from "./combonants/Footer/footer";
 import Page_Not_Found from "./combonants/page-not-found/Page_Not_Found";
 import Catagory_Section from "./combonants/catagory-page/Catagory_Section";
+import Checkou_Page from "./combonants/checkout-section/Checkou_Page";
 
 
 const queryClient = new QueryClient();
+
+
+
 
 const App=()=>{
     return(
@@ -37,6 +41,7 @@ const App=()=>{
                                                                                 <Route path="/" element={<><Header_main/> <Home_Page_Slider/><Shop_Category/> <Popular_Product/> <Signup_Section/> <Signin_Section_Have/><Footer_Section/> </>}/>
                                                                                 <Route path="/select" element={<> <Header_main/><Select_Page/> <Signup_Section/> <Signin_Section_Have/><Footer_Section/></>}/>
                                                                                 <Route path="/pages" element={<><Header_main/> <Catagory_Section/> <Signup_Section/> <Signin_Section_Have/><Footer_Section/></>}/>
+                                                                                <Route path="/checkout" element={<Checkou_Page/>}/>
                                                                                 <Route path="*" element={<><Page_Not_Found/></>}/>
                                                                         </Routes>
                                                         </BrowserRouter>

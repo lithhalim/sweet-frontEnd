@@ -92,8 +92,16 @@
         position: fixed; left: 0; top: 8vh;
     }
 }
-@media screen and (max-width:600px) {
+@media screen and (max-width:550px) {
+
     .signin-container{
+        .signin-container-section{
+            width: 100vw;
+            padding: 20px;
+
+        }
+    
+
         .container-input  {
         span {
             left: 70px;

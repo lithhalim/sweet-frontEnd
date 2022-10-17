@@ -1,0 +1,87 @@
+@use "../../main-style/style.scss";
+.checkout-container {
+    display: flex; justify-content: space-around; align-items: center;
+    padding: 30px 100px; flex-wrap: wrap; 
+
+    .payment-information {
+        width: 450px; box-shadow: 2px 2px 2px 2px silver; padding: 30px;
+        height: 450px;
+        .header {
+            padding: 10px 0px; font-weight: bold;  display: flex; justify-content: space-between;
+            align-items: center;
+        }
+        .price {
+            font-size: 1.4em ; padding: 10px 0px;
+         }
+         .payment-container {
+            li .text{
+                display: flex; justify-content: space-between; align-items: center; 
+                margin-bottom: 15px; font-size: .9em;
+                p{
+                    span {
+                        display: block; padding: 3px 0px;
+                        text-align: left;
+                        &:first-child{
+                            font-weight: bold; font-size: 1.1em;
+                        }
+                    }
+                    
+                }
+            }
+         }
+    }
+
+    .sale-information {
+        width: 450px;  margin-top: 10px;  box-shadow: 2px 2px 2px 2px silver; padding: 30px;
+        height: 450px;
+
+        .header-section {
+            font-weight: bold; font-size: 1em; padding: 10px 0px;
+        }
+        .txt_field ,.text-filed {
+            width: 100%;
+            label {
+                display: block; font-weight: bold; font-size: .9em;
+                padding: 3px 3px;
+            }
+            input {
+                width: 100%; height: 40px; border-radius: 3px; padding: 10px;
+                border: 1px solid silver;
+            }
+            .error-section {
+                color: red; font-size: .7em; padding: 2px 0px;
+            }
+
+        }
+        .text-filed{
+            display: flex;  padding: 7px 0px;
+            .error-section {
+                color: red; font-size: .7em; padding: 2px 5px;
+            }
+            li{
+                width: 50%;
+            }
+        }
+        .submit-button0 {
+            width: 100%; height: 35px; color: white; background-color: style.$font-b;
+            margin-top: 15px;  font-weight: bold; border: none; border-radius: 5px; cursor: pointer;
+        }
+
+    }
+}
+
+
+.container-card-payment-item{
+    height: 40px; border: 1px solid silver;  margin-bottom: 10px;
+    padding: 5px;
+}  
+.custom-lable {
+    font-weight: bold; font-size: .8em; padding: 5px; margin-top: 15px;
+}
+
+
+@media screen and (max-width:700px) {
+    .checkout-container {
+        padding: 100px 50px;
+    }
+}

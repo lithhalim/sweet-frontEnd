@@ -55,8 +55,11 @@ function Signin_Section_Have() {
 
 const closeSection=()=>{
     Sign_Context2.setsignin(false)
-    console.log("Ss")
 
+}
+const signupSectioon=()=>{
+  Sign_Context2.setsignin(false)
+  Sign_Context2.setsignup(true)
 }
 
   return (
@@ -91,6 +94,8 @@ const closeSection=()=>{
                                             <button className='submit-botton' type="submit">Sign In</button>
                     
                                             <p className='special-text'>{statusEmail!==false?<span>{statusEmail}</span>:<></>} </p>
+                                            <p className='special-text' style={{cursor:"pointer" ,padding:"10px"}} onClick={signupSectioon}>You Dont Have Account ? Sign Up </p>
+
                                         </Form>
                                     )}
                             </Formik>            

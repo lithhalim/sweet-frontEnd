@@ -18,7 +18,7 @@ function Catagory_Section() {
                 setdatause(data.data)
                 setisfitshing(false)
             }):<></>
-        },[])
+        },[Catagory_Create_Contextitem])
 
         if(isfitshing){
             return<Loading_Section/>
